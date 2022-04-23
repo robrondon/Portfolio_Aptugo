@@ -1,0 +1,22 @@
+.autocomplete {
+  & .aptugoDropdown {
+    & :global(.aptugo__control) {
+      &:hover {
+        border-color: rgba(0, 0, 0, 0.87);
+      }
+    }
+
+    & :global(.aptugo__value-container) {
+      height: 56px;
+    }
+
+    & :global(.aptugo__menu) {
+      z-index: 10;
+    }
+
+    & :global(.aptugo__control--is-focused) {
+      border-width: 0;
+      box-shadow: none;
+    }
+  }
+}

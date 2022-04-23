@@ -1,0 +1,80 @@
+.menu {
+  display: flex;
+  margin-left: 3rem;
+  & > div {
+    & :global(.MuiButton-root) {
+      &:hover {
+        background-color: inherit;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: #d10125;
+        transition: 0.33s all ease-out;
+      }
+    }
+  }
+}
+
+.subMenu {
+  position: absolute;
+  background: white;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  overflow: hidden;
+  transition: all 330ms ease-out 0ms;
+  margin-top: 1rem;
+  border-top: 3px solid #d10125;
+  padding: 1.5rem 2.2rem;
+
+  & a {
+    display: block;
+  }
+
+  & :global(.MuiButton-root) {
+    color: #9f9f9f;
+    padding-right: 1rem;
+    transition: all 330ms ease-out 0ms;
+    &::before {
+      content: '>';
+      transition: all 330ms ease-out 0ms;
+      width: 0;
+      overflow: hidden;
+    }
+
+    &:hover {
+      padding-right: 0;
+      color: #d10125;
+      background-color: white;
+      &::before {
+        width: 1rem;
+      }
+    }
+  }
+}
+
+.selectedItem {
+  & .subMenu {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  & > :global(.MuiButton-root) {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  & > a > :global(.MuiButton-root) {
+    &::after {
+      width: 100%;
+    }
+  }
+}

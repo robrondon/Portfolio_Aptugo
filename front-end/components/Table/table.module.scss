@@ -1,0 +1,149 @@
+.tableHolder {
+  overflow: auto;
+
+  & .table {
+    & .tableHeader {
+      & .warning {
+      }
+      & .tableHeadRow {
+      }
+    }
+    & .tableCell {
+    }
+    & .tableHeadCell {
+    }
+
+    & .tableBodyRow {
+    }
+  }
+}
+
+.tableField {
+  & img {
+    width: auto;
+    height: 2.5rem;
+    border-radius: 50%;
+  }
+}
+
+.tableChip {
+  background-color: #cdcdcd;
+  margin: 0.5rem;
+}
+
+// tableHeader: {
+//   '&.warning': {
+//     color: warningColor[0]
+//   },
+//   '&.primary': {
+//     color: primaryColor[0]
+//   },
+//   '&.danger': {
+//     color: dangerColor[0]
+//   },
+//   '&.success': {
+//     color: successColor[0]
+//   },
+//   '&.info': {
+//     color: infoColor[0]
+//   },
+//   '&.rose': {
+//     color: roseColor[0]
+//   },
+//   '&.gray': {
+//     color: grayColor[0]
+//   }
+// },
+// tableHolder: {
+//   flex: '1 1 auto',
+//   padding: '0.9375rem 20px'
+// },
+// table: {
+//   marginBottom: "0",
+//   width: "100%",
+//   maxWidth: "100%",
+//   backgroundColor: "transparent",
+//   borderSpacing: "0",
+//   borderCollapse: "collapse",
+// },
+// tableHeadCell: {
+//   color: "inherit",
+//   ...defaultFont,
+//   "&, &$tableCell": {
+//     fontSize: "1em"
+//   }
+// },
+// tableCell: {
+//   ...defaultFont,
+//   lineHeight: "1.42857143",
+//   padding: "12px 8px",
+//   verticalAlign: "middle",
+//   fontSize: "0.8125rem"
+// },
+// tableResponsive: {
+//   width: "100%",
+//   marginTop: theme.spacing(3),
+//   border: "0",
+//   marginBottom: "30px",
+//   borderRadius: "6px",
+//   color: "rgba(" + hexToRgb(blackColor) + ", 0.87)",
+//   background: whiteColor,
+//   boxShadow: "0 1px 4px 0 rgba(" + hexToRgb(blackColor) + ", 0.14)",
+//   position: "relative",
+//   display: "flex",
+//   flexDirection: "column",
+//   minWidth: "0",
+//   wordWrap: "break-word",
+//   fontSize: ".875rem",
+// },
+// tableHeading: {
+//   display: 'flex',
+//   '& > .title': {
+//     color: '#3C4858',
+//     marginTop: '15px',
+//     marginLeft: '15px',
+//     minHeight: 'auto',
+//     fontWeight: '300',
+//     marginBottom: '0px',
+//   },
+//   '& > .MuiIconButton-root': {
+//     float: 'left',
+//     padding: '15px',
+//     margin: '-20px 0 0 15px',
+//     borderRadius: '3px',
+//     width: '65px',
+//     '&.warning': {
+//       ...warningCardHeader
+//     },
+//     '&.primary': {
+//       ...primaryCardHeader,
+//       color: whiteColor
+//     },
+//     '&.danger': {
+//       ...dangerCardHeader
+//     },
+//     '&.success': {
+//       ...successCardHeader
+//     },
+//     '&.info': {
+//       ...infoCardHeader
+//     },
+//     '&.rose': {
+//       ...roseCardHeader
+//     }
+//   }
+// },
+// tableHeadRow: {
+//   height: "56px",
+//   color: "inherit",
+//   display: "table-row",
+//   outline: "none",
+//   verticalAlign: "middle"
+// },
+// tableBodyRow: {
+//   height: "48px",
+//   color: "inherit",
+//   display: "table-row",
+//   outline: "none",
+//   verticalAlign: "middle"
+// }

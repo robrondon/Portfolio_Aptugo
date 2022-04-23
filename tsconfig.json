@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "esNext",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "lib": ["es2015", "dom", "es2017"],
+    "resolveJsonModule": true,
+    "strict": false,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "typeRoots": ["./types", "./node_modules/@types"],
+    "importsNotUsedAsValues": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "dist": ["dist"]
+    }
+  },
+  "exclude": ["node_modules", "types"]
+}

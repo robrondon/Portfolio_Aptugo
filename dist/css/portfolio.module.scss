@@ -1,0 +1,335 @@
+/* New Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --color-bg: #1f1f38;
+  --color-bg-variant: #2c2c6c;
+  --color-primary: #4db5ff;
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+  --transition: all 400ms ease;
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  // -ms-overflow-style: none;  /* IE and Edge */
+  // scrollbar-width: none;  /* Firefox */
+}
+
+// ::-webkit-scrollbar {
+//   display: none;
+// }
+
+:global(#app) {
+  font-family: 'Poppins', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-white);
+  line-height: 1.7;
+  background-image: url('../img/bg-texture.png');
+
+  /****** General Styles *****/
+
+  .container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 500;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .section {
+    margin-top: 20rem;
+    height: 100vh;
+  }
+  .section > h2,
+  .section > h5 {
+    text-align: center;
+    color: var(--color-light);
+  }
+
+  .section > h2 {
+    color: var(--color-primary);
+    margin-bottom: 4.8rem;
+  }
+
+  .textLight {
+    color: var(--color-light);
+  }
+
+  a {
+    color: var(--color-primary);
+    transition: var(--transition);
+    font-size: 1.6rem;
+  }
+
+  a:hover {
+    color: var(--color-white);
+  }
+
+  .btn {
+    width: max-content;
+    display: inline-block;
+    color: var(--color-primary);
+    padding: 1.2rem 1.92rem;
+    border-radius: 0.64rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+  }
+
+  .btn:hover {
+    background: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
+  }
+
+  .btnPrimary {
+    @extend .btn;
+    background: var(--color-primary);
+    color: var(--color-bg);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /********** HEADER **************/
+  .header {
+    height: 100vh;
+    padding-top: 5rem;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+  }
+
+  // Call to Action Bottons
+  .cta {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.92rem;
+  }
+
+  // Socials Icons
+  .headerSocials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.28rem;
+    position: absolute;
+    left: 0;
+    bottom: 10rem;
+  }
+
+  :global(.css-i4bv87-MuiSvgIcon-root) {
+    font-size: 2.5rem;
+    // color: var(--color-primary);
+  }
+
+  .headerSocials::after {
+    content: '';
+    width: 1px;
+    height: 3.2rem;
+    background: var(--color-primary);
+  }
+
+  // Profile Image
+  .me {
+    background: linear-gradient(var(--color-primary), transparent);
+    width: 35rem;
+    height: 40rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8rem;
+    border-radius: 19.2rem 19.2rem 0 0;
+    overflow: hidden;
+  }
+
+  // Scroll Down
+  .scroll_down {
+    position: absolute;
+    right: -3rem;
+    bottom: 14rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 2rem;
+  }
+
+  /********** NAVBAR **************/
+  .nav {
+    background: rgba(0, 0, 0, 0.3);
+    // background: yellow;
+    // width: max-content;
+    width: 40%;
+    // display: block;
+    padding: 1.12rem 2.72rem;
+    z-index: 2;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.28rem;
+    border-radius: 4.8rem;
+    backdrop-filter: blur(15px);
+    & a {
+      background: transparent;
+      padding: 1.44rem;
+      border-radius: 50%;
+      display: flex;
+      color: var(--color-light);
+      font-size: 1.76rem;
+    }
+    & a:hover {
+      background: rgba(0, 0, 0, 0.3);
+      color: var(--color-white);
+    }
+    & .active {
+      @extend a;
+      background: var(--color-bg);
+      color: var(--color-white);
+    }
+  }
+
+  /********** ABOUT SECTION  **************/
+
+  .aboutContainer {
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+  }
+
+  .aboutMe {
+    background-color: #fff;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 3.2rem;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      var(--color-primary),
+      transparent
+    );
+    display: grid;
+    place-items: center;
+  }
+
+  .aboutMeImage {
+    border-radius: 3.2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: var(--transition);
+  }
+
+  .aboutMeImage:hover {
+    transform: rotate(0deg);
+  }
+
+  .aboutCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+  }
+
+  .aboutCard {
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1.6rem;
+    padding: 3.2rem;
+    text-align: center;
+    transition: var(--transition);
+  }
+
+  .aboutCard:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+  }
+
+  .aboutIcon {
+    color: var(--color-primary);
+    font-size: 2.24rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .aboutCard h5 {
+    font-size: 1.52rem;
+  }
+
+  .aboutCard .small {
+    font-size: 1.12rem;
+    color: var(--color-light);
+  }
+  
+    .aboutContent p {
+    margin: 3.2rem 0 4rem;
+    color: var(--color-light);
+    font-size: 1.6rem;
+  }
+  /******** MEDIA QUERIES (Medium Devices) *********/
+  @media screen and (max-width: 1024px) {
+    .container {
+      width: var(--container-width-md);
+    }
+    .section {
+      margin-top: 9.6rem;
+    }
+    .header {
+      height: 68vh;
+      padding-top: 8rem;
+    }
+    .scroll_down {
+      bottom: 8rem;
+      right: -1rem;
+    }
+    .headerSocials {
+      left: 2rem;
+      bottom: 4rem;
+    }
+  }
+
+  /******** MEDIA QUERIES (Small Devices) *********/
+  @media screen and (max-width: 600px) {
+    .container {
+      width: var(--container-width-sm);
+    }
+    .section > h2 {
+      margin-bottom: 3.2rem;
+    }
+    .header {
+      height: 100vh;
+    }
+    .headerSocials,
+    .scroll_down {
+      display: none;
+    }
+  }
+}

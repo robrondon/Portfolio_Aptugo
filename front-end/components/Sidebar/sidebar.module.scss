@@ -1,0 +1,73 @@
+.drawer {
+  flex-shrink: 0;
+  white-space: 'nowrap';
+}
+
+.drawerOpen {
+  width: 240px;
+  transition: width 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+}
+
+.drawerClose {
+  overflow-x: hidden;
+  transition: width 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+  width: 57px;
+}
+
+.baseColor {
+  color: rgba(255, 255, 255, 0.87);
+  & :global(.MuiIconButton-root) {
+    color: inherit;
+  }
+}
+
+.color:global(.MuiPaper-root) {
+  @extend .baseColor;
+  background-color: rgb(219, 54, 76);
+}
+
+.colorBlack:global(.MuiPaper-root) {
+  @extend .baseColor;
+  background-color: rgb(45, 52, 70);
+}
+
+.colorCyan:global(.MuiPaper-root) {
+  @extend .baseColor;
+  background-color: rgb(69, 129, 255);
+}
+
+.colorBlue {
+  &:global(.MuiPaper-root) {
+    color: #3f51b5;
+
+    & :global(.active) {
+      background-color: #3f51b5;
+      border-right: 2px solid #002984;
+      color: #fff;
+    }
+  }
+}
+
+.colorRed {
+  &:global(.MuiPaper-root) {
+    color: rgb(219, 54, 76);
+
+    & :global(.active) {
+      background-color: rgba(171, 0, 0, 0.08);
+      border-right: 2px solid rgb(219, 54, 76);
+      color: rgb(219, 54, 76);
+    }
+  }
+}
+
+.colorGreens {
+  &:global(.MuiPaper-root) {
+    color: #637381;
+
+    & :global(.active) {
+      background-color: rgba(0, 171, 85, 0.08);
+      border-right: 2px solid rgb(0, 171, 85);
+      color: rgb(0, 171, 85);
+    }
+  }
+}

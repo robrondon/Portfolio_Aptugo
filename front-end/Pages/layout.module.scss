@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,900;1,700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root {
+  --ck-z-default: 10000;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v55/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+}
+
+.menu {
+  & :global(.menu) {
+    display: flex;
+  }
+}
+
+:global(.MuiCardMedia-root) {
+  padding-top: 56.25%;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background: #eee;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+img {
+  display: block;
+}
+
+:global(#app) {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.mainPanel {
+  margin: 0;
+  padding-bottom: 3.1875rem;
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.dividerSpectrum {
+  height: 10px;
+  background: linear-gradient(to right, #54a0d2 0%, #5154b1 12%, #511e7d 21%, #671955 37%, #cc2119 53%, #f57713 65%, #f8df68 83%, #5cf1f5 100%);
+}
+
+.userInfo {
+  align-self: center;
+  float: right;
+  justify-self: flex-end;
+  margin: 0 0 0 auto;
+}
+
+.tableResponsive {
+  background: #fff;
+  border-radius: 6px;
+  flex-direction: column;
+
+  & .tableHeading {
+    display: flex;
+
+    & > h4 {
+      color: #3c4858;
+      margin-top: 15px;
+      min-height: auto;
+      font-weight: 100;
+      margin-left: 15px;
+      margin-bottom: 0px;
+      font-size: 1.3em;
+      line-height: 1.5em;
+    }
+
+    & :global(.MuiIconButton-root) {
+      float: left;
+      width: 65px;
+      margin: -20px 0 0 15px;
+      padding: 15px;
+      border-radius: 3px;
+    }
+
+    & :global(.danger) {
+      background: linear-gradient(60deg, #ef5350, #e53935);
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(244, 67, 54, 0.4);
+    }
+  }
+
+  & tableBody {
+    overflow-y: auto;
+  }
+}
+
+.madewithaptugo {
+  z-index: 1000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  & > div {
+    right: 0;
+    width: 100px;
+    bottom: 0px;
+    height: 59px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    align-items: center;
+    &::before {
+      top: 0;
+      left: 0;
+      border: 4px solid #2980b9;
+      content: '';
+      position: absolute;
+    }
+    & > div {
+      top: 20px;
+      font: 400 6px/1 'Lato', sans-serif;
+      color: #fff;
+      right: -15px;
+      width: 122px;
+      display: block;
+      padding: 5px 0;
+      position: absolute;
+      transform: rotate(45deg);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      text-transform: uppercase;
+      background-color: #3498db;
+      & > div {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.SidebarTitle {
+  background-color: rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  line-height: 50px;
+  padding: 0 1rem;
+
+  & > button {
+    margin: 0 5px 0 5px;
+  }
+}
+
+.withSidebarOpen {
+  margin-left: 240px;
+  padding: 2rem;
+  height: calc(100% - 51px);
+  box-sizing: border-box;
+}
+
+.withSidebarClosed {
+  margin-left: 57px;
+  padding: 2rem;
+  height: calc(100% - 51px);
+  box-sizing: border-box;
+}
+
+.withSidebarOpen,
+.withSidebarClosed {
+  & .indentedDiv {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid gainsboro;
+  }
+
+  & .actionArea {
+    text-align: right;
+    padding: 1rem;
+    background: #f5f5f5;
+  }
+}
+
+.bigHello {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
+  & h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 7rem;
+    margin: 0rem;
+    background: linear-gradient(45deg, #e02525, #466fa1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 12px;
+  }
+  & p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.87);
+    letter-spacing: 3.8px;
+  }
+
+  & span {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.7rem;
+    text-transform: lowercase;
+  }
+}
+
+.footer {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.87);
+  padding: 1rem;
+  background: black;
+  text-align: center;
+  box-sizing: border-box;
+  max-height: 3.1875rem;
+}
+
+.footerWithSidebarOpen {
+  position: fixed;
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  bottom: 0;
+  z-index: 5;
+}
+
+.footerWithSidebarClosed {
+  position: fixed;
+  margin-left: 57px;
+  width: calc(100% - 57px);
+  bottom: 0;
+  z-index: 5;
+}
+
+.footerWithoutSidebar {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 5;
+}
+
+.kanban {
+  display: flex;
+  height: 100%;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    height: auto;
+    word-break: break-all;
+    min-width: 0px;
+  }
+
+  & .list {
+    padding: 0.5rem;
+    min-height: 50px;
+    margin-right: 0.5rem;
+    flex-grow: 1;
+    text-align: center;
+
+    button {
+      display: none;
+    }
+
+    &:hover {
+      button {
+        display: block;
+        width: 100%;
+
+        & span {
+          line-height: 0;
+        }
+      }
+    }
+  }
+
+  & .item {
+    background: rgb(255, 255, 255);
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 0px;
+    opacity: initial;
+    word-break: initial;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05), 0 1px 2px -2px rgba(0, 0, 0, 0.06), 0 1px 3px 0 rgba(0, 0, 0, 0.07);
+    border-radius: 2px;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.1s linear;
+    border: 1px solid #e5e5e5;
+    padding: 0.5rem;
+    min-height: 70px;
+  }
+
+  & .over {
+    & .list {
+      transition: background-color linear 300ms;
+      background-color: #d6d6d6;
+    }
+  }
+}
+
+.tableChip {
+  background-color: #f7f7f7;
+  margin: 0.225rem;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+}
+
+.activeBoxesLayout {
+  & > :global(.MuiGrid-item) {
+    & > :global(.MuiButton-text) {
+      width: 100%;
+      & > :global(.MuiButton-label) > :global(.MuiPaper-root) {
+        width: 100%;
+      }
+    }
+
+    & > :global(.MuiGrid-grid-md-12) {
+      padding: 6px 8px;
+    }
+  }
+}

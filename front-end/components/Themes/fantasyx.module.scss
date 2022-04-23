@@ -1,0 +1,717 @@
+.blackNavbar {
+  background-color: #000;
+  justify-content: space-between;
+  & button {
+    color: #fff;
+  }
+}
+
+.logo {
+  & img {
+    width: 275px;
+  }
+}
+
+.topMenu {
+  float: right;
+  display: flex;
+
+  & :global(.menu) {
+    display: flex;
+  }
+}
+
+.smallAvatar {
+  & img {
+    background-color: #69f0ae;
+    width: 44px;
+    padding: 4px;
+    border-radius: 44px;
+  }
+}
+
+.paper:global(.MuiPaper-root) {
+  min-height: calc(100% - 64px);
+  box-sizing: border-box;
+  padding-bottom: 51px;
+  background: #f3f3f3;
+
+  & > :global(.MuiContainer-root) {
+    padding: 3rem 0 0;
+    background-color: #fff;
+  }
+}
+
+.bigAvatar {
+  & img {
+    width: 165px;
+    border-radius: 165px;
+  }
+}
+
+.userNick {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: 1.575px;
+  text-align: right;
+  text-transform: capitalize;
+}
+
+.userName {
+  font-family: 'Montserrat';
+  font-size: 12px;
+  text-align: right;
+  color: #777777;
+  line-height: 20px;
+  letter-spacing: 1.26px;
+}
+
+.winsloses {
+  display: block;
+}
+
+.userMoney {
+  font-family: 'Montserrat';
+  font-size: 16px;
+  text-align: right;
+  color: #777777;
+}
+
+.rightSeparator {
+  margin-left: 32px;
+}
+
+.weekGainText {
+  font-family: 'Montserrat';
+  font-size: 15px;
+  color: #777777;
+  font-weight: 500;
+}
+
+.weekGainMoney {
+  font-family: 'Montserrat';
+  font-size: 22px;
+  color: #64dd17;
+  font-weight: 500;
+}
+
+.weekGainDetails {
+  font-family: 'Montserrat';
+  display: flex;
+  font-size: 9px;
+  color: #777777;
+}
+
+.portfolioLinks {
+  margin-top: 32px;
+}
+
+.leaguesSelector {
+  background: white;
+  padding: 1rem;
+  text-align: right;
+  box-shadow: 1px 1px 1px;
+  position: sticky;
+}
+
+.paper {
+  & .invitation {
+    margin: 2rem 4rem;
+    border: 1px solid black;
+    padding: 4rem;
+    box-shadow: 1px 1px 6px 2px #b9b9b936;
+
+    & .loggedJoin {
+      text-align: center;
+      margin: 3rem 0 0;
+    }
+
+    & .acceptInviteLogo {
+      margin: -4rem -4rem 1rem;
+      background: black;
+      padding: 1rem;
+
+      & img {
+        margin: 0 auto;
+        max-width: 30%;
+      }
+    }
+
+    & :global(.MuiTypography-h4) {
+      display: block;
+      background: #868686ab;
+      margin: -1rem -4rem 0;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    & .loginError {
+      color: red;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    & .invitationBox,
+    & .invitationBoxRight {
+      margin: 1rem 0.5rem -3rem -3rem;
+      &.invitationBoxRight {
+        margin: 1rem -3rem -3rem 0.5rem;
+      }
+      border: 1px solid black;
+      padding: 1rem;
+
+      & :global(.MuiTypography-subtitle2) {
+        background-color: black;
+        color: white;
+        padding: 1rem;
+        margin: -1rem -1rem 2rem;
+      }
+
+      & :global(.MuiButton-containedPrimary) {
+        margin: 2rem auto 0;
+      }
+    }
+  }
+
+  & .leagueTitle {
+    text-align: center;
+    width: 100%;
+  }
+
+  & .logsTable {
+    & :global(.MuiTypography-h4) {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+    }
+
+    & thead {
+      background: #ebebeb;
+    }
+
+    & :global(.MuiTableCell-root) {
+      padding: 0.5rem;
+    }
+  }
+
+  & .fakeTable {
+    display: table;
+    margin: 1rem;
+    border: 1px solid #ebebeb;
+    border-collapse: collapse;
+
+    & .fakeTableHeader {
+      background-color: #ebebeb;
+      color: #777777;
+
+      & > div {
+        padding: 0.5rem;
+      }
+    }
+
+    & .fakeTableHeader,
+    & .fakeTableRow {
+      vertical-align: middle;
+      display: table-row;
+      border-bottom: 1px solid #ebebeb;
+      & span {
+        font-size: 14px;
+      }
+
+      & .sortColumn:after {
+        font-family: 'Material Icons';
+        content: '\e5c5';
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        transition: transform 300ms linear;
+      }
+
+      & .sortInverse:after {
+        transform: rotateZ(180deg);
+      }
+
+      & .fakeTableCompany {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+        width: 10%;
+        border-right: 1px solid #ebebeb;
+        padding: 0.2rem;
+        box-sizing: border-box;
+      }
+
+      & .fakeTableCell {
+        position: relative;
+        display: table-cell;
+        width: 8%;
+        overflow: hidden;
+        vertical-align: middle;
+        border-right: 1px solid #ebebeb;
+        padding: 0.2rem;
+        box-sizing: border-box;
+      }
+
+      & .fakeTablePerc,
+      & .fakeTablePrice {
+        width: 8%;
+        overflow: hidden;
+        text-align: right;
+        display: table-cell;
+        vertical-align: middle;
+        border-right: 1px solid #ebebeb;
+        padding: 0.2rem;
+        box-sizing: border-box;
+        & span {
+          display: inline;
+        }
+      }
+
+      & .fakeTablePerc {
+        &::before {
+          content: '%';
+          font-size: 10px;
+          margin-right: 2px;
+        }
+      }
+
+      & .fakeTablePrice {
+        &::before {
+          content: '$';
+          font-size: 10px;
+          margin-right: 2px;
+        }
+      }
+
+      &:hover {
+        background-color: #ebebeb;
+      }
+    }
+  }
+}
+
+.fakeTableStock {
+  width: 8%;
+  overflow: hidden;
+}
+
+.sharesAddButton {
+  margin-left: 1rem;
+}
+
+.purchaseMessage {
+  display: inline;
+  margin-left: 10px;
+  color: #8e8e8e;
+  font-size: 0.7rem;
+}
+
+.peVeryHigh {
+  color: red;
+}
+
+.peHigh {
+  color: orange;
+}
+
+.peNormal {
+  color: green;
+}
+
+.peLow {
+  color: blue;
+}
+
+.fakeVeryHigh {
+  color: red;
+}
+.fakeTableCenterCell {
+  position: relative;
+  display: table-cell;
+  width: 8%;
+  overflow: hidden;
+  vertical-align: middle;
+  border-right: 1px solid #ebebeb;
+  padding: 0.2rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.fakeTablePercNeg {
+  color: red;
+}
+
+.fakeTablePercPos {
+  color: green;
+}
+
+.fakeTableCompanyAdd {
+  width: 28%;
+}
+
+.top10 {
+  display: flex;
+
+  & > div:first-child {
+    width: 97px;
+    text-align: right;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19.6121px;
+    line-height: 65px;
+    letter-spacing: 1.21px;
+    color: #c4c4c4;
+  }
+
+  & .smallAvatar img {
+    margin-left: 19px;
+    margin-right: 5px;
+  }
+
+  & .nick {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #000000;
+  }
+
+  & .worth {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    color: #f50057;
+  }
+}
+
+.matchup {
+  display: flex;
+  flex-wrap: wrap;
+  & > div {
+    width: 50%;
+    display: flex;
+  }
+
+  & .matchupAvatar {
+    &.winning img {
+      background-color: #69f0ae;
+    }
+
+    & img {
+      width: 110px;
+      height: 110px;
+      background-color: #f50057;
+      padding: 4px;
+      border-radius: 165px;
+    }
+  }
+
+  & .bigAvatar img {
+    width: 90px;
+    height: 90px;
+    background-color: #f50057;
+    padding: 4px;
+  }
+
+  & .bigAvatar.winning img {
+    background-color: #69f0ae;
+  }
+
+  & .nick {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 103%;
+    letter-spacing: 0.01em;
+    color: #000000;
+  }
+
+  & > div {
+    margin: 0.5rem 0;
+    & > div button {
+      padding: 0;
+      width: 98px;
+      height: 98px;
+      overflow: hidden;
+      border-radius: 45px;
+    }
+  }
+
+  & > div:nth-child(even) {
+    padding-left: 3px;
+    box-sizing: border-box;
+    position: relative;
+    & > div:first-child {
+      left: 110px;
+      top: 10px;
+    }
+  }
+
+  & > div:nth-child(odd) {
+    padding-right: 3px;
+    box-sizing: border-box;
+    justify-content: flex-end;
+
+    & > div:first-child {
+      text-align: right;
+      margin-right: 5px;
+    }
+  }
+
+  & .totalGainText {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 110%;
+    letter-spacing: 0.01em;
+    color: #777777;
+  }
+
+  & .totalGain {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 98%;
+    letter-spacing: 0.01em;
+    color: #f50057;
+  }
+}
+
+.matchupVS {
+  display: flex;
+  justify-content: center;
+  padding: 75px 0;
+}
+
+.stockTable {
+  padding: 1rem 0.5rem;
+}
+
+:global(#app) > div {
+  margin-bottom: 3.1rem;
+}
+
+.prevnext {
+  text-align: right;
+  padding: 1rem;
+}
+
+.searchAndFilters {
+  display: flex;
+  padding: 1rem;
+
+  & > div {
+    padding: 1rem;
+  }
+
+  & > div:first-child {
+    flex-grow: 2;
+  }
+
+  & > div:last-child {
+    flex-grow: 1;
+  }
+}
+
+.leaguePlayersList {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  margin: 3rem;
+  min-height: 300px;
+
+  & > div {
+    position: absolute;
+    transition: all 500ms cubic-bezier(0.67, 0.17, 0.48, 1.3);
+  }
+
+  & img {
+    background-color: #69f0ae;
+    width: 165px;
+    padding: 4px;
+    border-radius: 83px;
+    height: 165px;
+  }
+}
+
+.leagueadminArea {
+  width: 100%;
+  text-align: center;
+  margin: 1rem;
+}
+
+.draftGrid {
+  display: flex;
+
+  & > div {
+    flex-grow: 1;
+    flex-basis: 0;
+    border-right: 1px solid;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+    color: #777777;
+    &:last-child {
+      border-right: none;
+    }
+
+    & .playerNick {
+      color: #f43079;
+    }
+
+    & .playerPick {
+      background-color: #f4307924;
+      min-height: 2rem;
+    }
+
+    & .currentPick {
+      background-color: #f43079;
+    }
+  }
+}
+
+.centered {
+  text-align: center;
+}
+
+.DialogRow {
+  white-space: nowrap;
+  min-width: 300px;
+  margin: 1rem 1rem 1rem 0;
+  display: flex;
+  & > span {
+    display: inline-block;
+    white-space: nowrap;
+    text-align: right;
+    margin-right: 1rem;
+    width: 50%;
+  }
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+:global(.MuiListItemText-secondary.MuiTypography-body2) {
+  font-size: 0.6rem;
+}
+
+.money {
+  &::before {
+    content: '$';
+    font-size: 10px;
+    margin-right: 2px;
+  }
+}
+
+.portfolioTopArea {
+  margin: 1rem;
+
+  & .avatarArea {
+    margin-right: 1rem;
+  }
+
+  & .userName {
+    & p {
+      margin: 0;
+    }
+  }
+}
+
+.otherMatchups {
+  margin: 1rem;
+  padding-bottom: 1rem;
+
+  & :global(.MuiGrid-item) {
+    display: flex;
+
+    & .firstPlayer,
+    & .secondPlayer {
+      display: flex;
+      color: #777777;
+      font-size: 7px;
+
+      & .playerAvatar {
+        margin: 0 0.5rem;
+
+        &.winning img {
+          background-color: #69f0ae;
+        }
+        & img {
+          background-color: #f50057;
+          width: 32px;
+          padding: 2px;
+          border-radius: 32px;
+        }
+      }
+
+      & .nick {
+        font-size: 11px;
+        color: #000000;
+        display: block;
+      }
+
+      & .earning {
+        font-size: 11px;
+        color: #f50057;
+        display: block;
+      }
+    }
+  }
+}
+
+.loggedInUser {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-weight: 100;
+  margin-left: 2rem;
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 1rem;
+  }
+}
+
+.emptyMessageScreen {
+  text-align: center;
+
+  & h4 {
+    padding: 5rem;
+    text-align: center;
+  }
+
+  & h6 {
+    text-align: center;
+    margin-top: -3rem;
+    padding-bottom: 5rem;
+  }
+  & button {
+    margin: 0 auto;
+    margin-top: -3rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.lastweek {
+  background: black;
+  color: white;
+  padding: 1rem;
+  margin-top: -3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+}

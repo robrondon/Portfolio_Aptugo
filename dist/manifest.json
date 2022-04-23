@@ -1,0 +1,22 @@
+{
+  "short_name": "Portfolio",
+  "name": "Aptugo - Augmented Software Development",
+  "description": "Manage software lean & fast and elevate your team performance to the next level. Aptugo was created by developers with developers in mind.",
+  "icons": [
+    {
+      "src": "/img/maskable_icon.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/img/favicon.png",
+      "type": "image/png",
+      "sizes": "228x228"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#0D1D2B",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#0D1D2B"
+}
