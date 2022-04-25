@@ -1,4 +1,5 @@
 import {
+  CheckCircle,
   Email,
   FolderCopy,
   GitHub,
@@ -172,8 +173,132 @@ const Dashboard: FunctionComponent = (props: any) => {
             </div>
           </div>
 
-          <div id="experience" className={theme.section}>
-            Experience
+          <div id="experience" className={theme.experience}>
+            <Typography variant="h5">What Skills Do I Have</Typography>
+
+            <Typography variant="h2">My Experience</Typography>
+
+            <div className={theme.experienceContainer}>
+              <div className={theme.frontend}>
+                <Typography variant="h3">Frontend Development</Typography>
+
+                <div className={theme.experienceContent}>
+                  <div className={theme.experienceDetails}>
+                    <div className={theme.experienceIcon}>
+                      <CheckCircle />
+                    </div>
+
+                    <div>
+                      <Typography variant="h4">HTML</Typography>
+
+                      <span className={theme.small}>Experienced</span>
+                    </div>
+                  </div>
+
+                  <div className={theme.experienceDetails}>
+                    <div className={theme.experienceIcon}>
+                      <CheckCircle />
+                    </div>
+
+                    <div>
+                      <Typography variant="h4">CSS</Typography>
+
+                      <span className={theme.small}>Experienced</span>
+                    </div>
+                  </div>
+
+                  <div className={theme.experienceDetails}>
+                    <div className={theme.experienceIcon}>
+                      <CheckCircle />
+                    </div>
+
+                    <div>
+                      <Typography variant="h4">JavaScript</Typography>
+
+                      <span className={theme.small}>Experienced</span>
+                    </div>
+                  </div>
+
+                  <div className={theme.experienceDetails}>
+                    <div className={theme.experienceIcon}>
+                      <CheckCircle />
+                    </div>
+
+                    <div>
+                      <Typography variant="h4">Bootstrap</Typography>
+
+                      <span className={theme.small}>Experienced</span>
+                    </div>
+                  </div>
+
+                  <div className={theme.experienceDetails}>
+                    <div className={theme.experienceIcon}>
+                      <CheckCircle />
+                    </div>
+
+                    <div>
+                      <Typography variant="h4">React</Typography>
+
+                      <span className={theme.small}>Experienced</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className={theme.backend}>
+                <Typography variant="h3">Backend Development</Typography>
+
+                <div className={theme.experienceContent}>
+                  <div className={theme.experienceDetails}>
+                    <div className={theme.experienceIcon}>
+                      <CheckCircle />
+                    </div>
+
+                    <div>
+                      <Typography variant="h4">Node js</Typography>
+
+                      <span className={theme.small}>Experienced</span>
+                    </div>
+                  </div>
+
+                  <div className={theme.experienceDetails}>
+                    <div className={theme.experienceIcon}>
+                      <CheckCircle />
+                    </div>
+
+                    <div>
+                      <Typography variant="h4">Express js</Typography>
+
+                      <span className={theme.small}>Experienced</span>
+                    </div>
+                  </div>
+
+                  <div className={theme.experienceDetails}>
+                    <div className={theme.experienceIcon}>
+                      <CheckCircle />
+                    </div>
+
+                    <div>
+                      <Typography variant="h4">MySQL</Typography>
+
+                      <span className={theme.small}>Experienced</span>
+                    </div>
+                  </div>
+
+                  <div className={theme.experienceDetails}>
+                    <div className={theme.experienceIcon}>
+                      <CheckCircle />
+                    </div>
+
+                    <div>
+                      <Typography variant="h4">Sequelize</Typography>
+
+                      <span className={theme.small}>Experienced</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div id="services" className={theme.section}>
