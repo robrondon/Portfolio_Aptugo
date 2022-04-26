@@ -44,11 +44,11 @@ const Dashboard: FunctionComponent = (props: any) => {
             </Typography>
 
             <div className={theme.cta}>
-              <a target="_blank" className={theme.btn} href="/img/CV-RobRondon-ESP.pdf">
+              <a target="_blank" className={theme.btn} href="/img/CV-RobRondon-ENG.pdf">
                 Download CV
               </a>
 
-              <a className={theme.btnPrimary} href="#">
+              <a className={theme.btnPrimary} href="#contact">
                 Let's Talk
               </a>
             </div>
@@ -162,11 +162,11 @@ const Dashboard: FunctionComponent = (props: any) => {
                 </div>
 
                 <Typography variant="inherit">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nulla, minus ad quam exercitationem, omnis placeat ipsum
-                  praesentium, distinctio alias illo saepe a eos ratione adipisci magnam perspiciatis vitae sunt!
+                  I'm a 32 years old trainee Full Stack Web Developer looking forward to give my first steps in software development on a company that
+                  allows me to enhance my professional growth and potentiate my skills
                 </Typography>
 
-                <a className={theme.btnPrimary} href="#">
+                <a className={theme.btnPrimary} href="#contact">
                   Let's Talk
                 </a>
               </div>
@@ -191,7 +191,7 @@ const Dashboard: FunctionComponent = (props: any) => {
                     <div>
                       <Typography variant="h4">HTML</Typography>
 
-                      <span className={theme.small}>Experienced</span>
+                      <span className={theme.small}>Medium</span>
                     </div>
                   </div>
 
@@ -203,7 +203,7 @@ const Dashboard: FunctionComponent = (props: any) => {
                     <div>
                       <Typography variant="h4">CSS</Typography>
 
-                      <span className={theme.small}>Experienced</span>
+                      <span className={theme.small}>Medium</span>
                     </div>
                   </div>
 
@@ -215,19 +215,7 @@ const Dashboard: FunctionComponent = (props: any) => {
                     <div>
                       <Typography variant="h4">JavaScript</Typography>
 
-                      <span className={theme.small}>Experienced</span>
-                    </div>
-                  </div>
-
-                  <div className={theme.experienceDetails}>
-                    <div className={theme.experienceIcon}>
-                      <CheckCircle />
-                    </div>
-
-                    <div>
-                      <Typography variant="h4">Bootstrap</Typography>
-
-                      <span className={theme.small}>Experienced</span>
+                      <span className={theme.small}>Medium</span>
                     </div>
                   </div>
 
@@ -239,7 +227,7 @@ const Dashboard: FunctionComponent = (props: any) => {
                     <div>
                       <Typography variant="h4">React</Typography>
 
-                      <span className={theme.small}>Experienced</span>
+                      <span className={theme.small}>Beginner</span>
                     </div>
                   </div>
                 </div>
@@ -257,7 +245,7 @@ const Dashboard: FunctionComponent = (props: any) => {
                     <div>
                       <Typography variant="h4">Node js</Typography>
 
-                      <span className={theme.small}>Experienced</span>
+                      <span className={theme.small}>Medium</span>
                     </div>
                   </div>
 
@@ -269,7 +257,7 @@ const Dashboard: FunctionComponent = (props: any) => {
                     <div>
                       <Typography variant="h4">Express js</Typography>
 
-                      <span className={theme.small}>Experienced</span>
+                      <span className={theme.small}>Medium</span>
                     </div>
                   </div>
 
@@ -281,7 +269,7 @@ const Dashboard: FunctionComponent = (props: any) => {
                     <div>
                       <Typography variant="h4">MySQL</Typography>
 
-                      <span className={theme.small}>Experienced</span>
+                      <span className={theme.small}>Medium</span>
                     </div>
                   </div>
 
@@ -293,7 +281,7 @@ const Dashboard: FunctionComponent = (props: any) => {
                     <div>
                       <Typography variant="h4">Sequelize</Typography>
 
-                      <span className={theme.small}>Experienced</span>
+                      <span className={theme.small}>Medium</span>
                     </div>
                   </div>
                 </div>
@@ -301,23 +289,185 @@ const Dashboard: FunctionComponent = (props: any) => {
             </div>
           </div>
 
-          <div id="services" className={theme.section}>
-            Services
-          </div>
-
           <div id="portfolio" className={theme.section}>
-            Portfolio
+            <Typography variant="h5">My Recent Work</Typography>
+
+            <Typography variant="h2">Portfolio</Typography>
+
+            <div className={theme.portfolioContainer}>
+              <div className={theme.portfolioItem}>
+                <div className={theme.portfolioImage}>
+                  <picture>
+                    <img src="/img/quoteGenerator.gif" alt="/img/quoteGenerator.gif" />
+                  </picture>
+                </div>
+
+                <Typography variant="h3">Quotes Generator</Typography>
+
+                <div className={theme.portfolioCta}>
+                  <a target="_blank" className={theme.btn} href="https://github.com/robrondon/Quote_Generator">
+                    Github
+                  </a>
+
+                  <a target="_blank" className={theme.btnPrimary} href="https://robrondon.github.io/Quote_Generator/">
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+
+              <div className={theme.portfolioItem}>
+                <div className={theme.portfolioImage}>
+                  <picture>
+                    <img src="/img/picInpic.gif" alt="/img/picInpic.gif" />
+                  </picture>
+                </div>
+
+                <Typography variant="h3">Picture in Picture</Typography>
+
+                <div className={theme.portfolioCta}>
+                  <a target="_blank" className={theme.btn} href="https://github.com/robrondon/Picture_in_Picture">
+                    Github
+                  </a>
+
+                  <a target="_blank" className={theme.btnPrimary} href="https://robrondon.github.io/Picture_in_Picture/">
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+
+              <div className={theme.portfolioItem}>
+                <div className={theme.portfolioImage}>
+                  <picture>
+                    <img src="/img/jokeTeller.gif" alt="/img/jokeTeller.gif" />
+                  </picture>
+                </div>
+
+                <Typography variant="h3">Joke Teller</Typography>
+
+                <div className={theme.portfolioCta}>
+                  <a target="_blank" className={theme.btn} href="https://github.com/robrondon/joke_teller">
+                    Github
+                  </a>
+
+                  <a target="_blank" className={theme.btnPrimary} href="https://robrondon.github.io/joke_teller/">
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+
+              <div className={theme.portfolioItem}>
+                <div className={theme.portfolioImage}>
+                  <picture>
+                    <img src="/img/infiniteScroll.gif" alt="/img/infiniteScroll.gif" />
+                  </picture>
+                </div>
+
+                <Typography variant="h3">Infinite Scroll</Typography>
+
+                <div className={theme.portfolioCta}>
+                  <a target="_blank" className={theme.btn} href="https://github.com/robrondon/Infinite_Scroll">
+                    Github
+                  </a>
+
+                  <a target="_blank" className={theme.btnPrimary} href="https://robrondon.github.io/Infinite_Scroll/">
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+
+              <div className={theme.portfolioItem}>
+                <div className={theme.portfolioImage}>
+                  <picture>
+                    <img src="/img/rotatingNav.gif" alt="/img/rotatingNav.gif" />
+                  </picture>
+                </div>
+
+                <Typography variant="h3">Rotating NavBar</Typography>
+
+                <div className={theme.portfolioCta}>
+                  <a target="_blank" className={theme.btn} href="https://github.com/robrondon/rotating_navigation_bar">
+                    Github
+                  </a>
+
+                  <a target="_blank" className={theme.btnPrimary} href="https://robrondon.github.io/rotating_navigation_bar/">
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+
+              <div className={theme.portfolioItem}>
+                <div className={theme.portfolioImage}>
+                  <picture>
+                    <img src="/img/simonGame.gif" alt="/img/simonGame.gif" />
+                  </picture>
+                </div>
+
+                <Typography variant="h3">Simon Game</Typography>
+
+                <div className={theme.portfolioCta}>
+                  <a target="_blank" className={theme.btn} href="https://github.com/robrondon/Simon-Game">
+                    Github
+                  </a>
+
+                  <a target="_blank" className={theme.btnPrimary} href="https://robrondon.github.io/Simon-Game/">
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div id="testimonials" className={theme.section}>
-            Testimonials
-          </div>
+          <div id="contact" className={theme.contactMe}>
+            <Typography variant="h5">Get In Touch</Typography>
 
-          <div id="contact" className={theme.section}>
-            Contact
-          </div>
+            <Typography variant="h2">Contact Me</Typography>
 
-          <div>Footer</div>
+            <div className={theme.contactContainer}>
+              <div className={theme.contactOptions}>
+                <div className={theme.option}>
+                  <div className={theme.icon}>
+                    <LinkedIn />
+                  </div>
+
+                  <Typography variant="h4">LinkedIn</Typography>
+
+                  <Typography variant="h5">robrondon</Typography>
+
+                  <a target="_blank" href="https://www.linkedin.com/in/robrondon/">
+                    My LinkedIn Profile
+                  </a>
+                </div>
+
+                <div className={theme.option}>
+                  <div className={theme.icon}>
+                    <WhatsApp />
+                  </div>
+
+                  <Typography variant="h4">WhatsApp</Typography>
+
+                  <Typography variant="h5">+5491124002852</Typography>
+
+                  <a target="_blank" href="https://wa.me/5491124002852">
+                    Send me a message
+                  </a>
+                </div>
+
+                <div className={theme.option}>
+                  <div className={theme.icon}>
+                    <Email />
+                  </div>
+
+                  <Typography variant="h4">Email</Typography>
+
+                  <Typography variant="h5">robrondon11@gmail.com</Typography>
+
+                  <a target="_blank" href="mailto:robrondon11@gmail.com">
+                    Send me an email
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </React.Fragment>

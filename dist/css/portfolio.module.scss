@@ -68,7 +68,7 @@ html {
   }
 
   .section {
-    margin-top: 15rem;
+    margin-top: 10rem;
     height: 100vh;
   }
   .section > h2,
@@ -229,6 +229,7 @@ html {
   /********** ABOUT SECTION  **************/
 
   .aboutContainer {
+    // @extend .container;
     display: grid;
     grid-template-columns: 35% 50%;
     gap: 15%;
@@ -307,11 +308,14 @@ html {
   /********** EXPERIENCE  SECTION  **************/
   .experience {
     @extend .section;
+    height: 75vh;
+    margin-top: 1rem;
   }
   .experienceContainer {
+    // @extend .container;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3.2rem;
+    gap: 5rem;
     > div {
       // background: var(--color-bg-variant);
       background: var(--color-primary-variant);
@@ -337,11 +341,12 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 3.2rem;
+    gap: 2rem;
   }
 
   .experienceDetails {
     display: flex;
-    gap: 1.6rem;
+    gap: 1rem;
     h4 {
       font-size: 1.8rem;
     }
@@ -353,6 +358,125 @@ html {
   .experienceIcon {
     margin-top: 6px;
     color: var(--color-primary);
+  }
+
+  /********** PORTFOLIO  SECTION  **************/
+
+  .portfolioContainer {
+    // @extend .container;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+
+  .portfolioItem {
+    // background: var(--color-bg-variant);
+    background: var(--color-primary-variant);
+    padding: 1.9rem;
+    border-radius: 3.2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    text-align: center;
+  }
+
+  .portfolioItem:hover {
+    // border-color: var(--color-bg-variant);
+    border-color: var(--color-primary-variant);
+    background: transparent;
+  }
+
+  .portfolioImage {
+    border-radius: 2.4rem;
+    overflow: hidden;
+  }
+
+  .portfolioItem h3 {
+    margin: 1.9rem 0 3.2rem;
+    font-size: 2rem;
+  }
+
+  .portfolioCta {
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+    margin-bottom: 1.6rem;
+  }
+
+  /********** CONTACT ME  SECTION  **************/
+  .contactMe {
+    @extend .section;
+    margin-top: 40rem;
+  }
+  .contactContainer {
+    @extend .container;
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .contactOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .option {
+    // background: var(--color-bg-variant);
+    background: var(--color-primary-variant);
+    padding: 1.92rem;
+    border-radius: 1.92rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    & h4 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    & h5 {
+      font-size: 1.4rem;
+      color: var(--color-light);
+    }
+  }
+
+  .option:hover {
+    // border-color: var(--color-bg-variant);
+    border-color: var(--color-primary-variant);
+    background: transparent;
+    & div {
+      color: var(--color-primary);
+    }
+  }
+
+  .option > div {
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .option a {
+    margin-top: 1.12rem;
+    display: inline-block;
+    font-size: 1.28rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.92rem;
+    & input,
+    & textarea {
+      width: 100%;
+      padding: 2.4rem;
+      border-radius: 0.8rem;
+      background: transparent;
+      border: 2px solid var(--color-bg-variant);
+      resize: none;
+      color: var(--color-white);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    & input::placeholder,
+    & textarea::placeholder {
+      color: var(--color-primary);
+    }
   }
 
   /******** MEDIA QUERIES (Medium Devices) *********/
@@ -391,6 +515,9 @@ html {
     .aboutContent p {
       margin: 3rem 0 5rem;
     }
+    .experience {
+      margin-bottom: 10rem;
+    }
     .experienceContainer {
       grid-template-columns: 1fr;
     }
@@ -401,6 +528,17 @@ html {
     }
     .experienceContent {
       padding: 1.6rem;
+    }
+    .portfolioContainer {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.9rem;
+    }
+    .contactMe {
+      margin-top: 30rem;
+    }
+    .contactContainer {
+      grid-template-columns: 1fr;
+      gap: 3.2rem;
     }
   }
 
@@ -440,6 +578,7 @@ html {
     }
     .experience {
       margin-top: 15rem;
+      margin-bottom: 15rem;
     }
     .experienceContainer {
       gap: 1.6rem;
@@ -447,6 +586,16 @@ html {
     .experienceContainer > div {
       width: 100%;
       padding: 3.2rem 1.6rem;
+    }
+    .portfolioContainer {
+      grid-template-columns: 1fr;
+      gap: 1.6rem;
+    }
+    .contactMe {
+      margin-top: 200rem;
+    }
+    .contactContainer {
+      width: var(--container-width-sm);
     }
   }
 }

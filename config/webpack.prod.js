@@ -17,7 +17,9 @@ module.exports = merge(commonConfig, {
   devtool: false,
   plugins: [
     new CleanWebpackPlugin(),
-    new GenerateSW(),
+    new GenerateSW({
+      exclude: ['.htaccess'],
+    }),
     new CopyPlugin({
       patterns: [
         {
