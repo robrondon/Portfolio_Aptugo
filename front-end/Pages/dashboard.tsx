@@ -16,12 +16,51 @@ import {
 import Typography from '@mui/material/Typography'
 import portfoliomodulescss from 'dist/css/portfolio.module.scss'
 import React, { FunctionComponent } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { loadProjects, searchProjects } from '../store/actions/projectsActions'
+import { loadSkills, searchSkills } from '../store/actions/skillsActions'
+import { IState } from '../store/reducers/index'
 import baseClasses from './layout.module.scss'
 
 const Dashboard: FunctionComponent = (props: any) => {
   const classes = baseClasses
   const theme = portfoliomodulescss
+  const skills = useSelector((state: IState) => state.skills).skills
+  const skillsData = useSelector((state: IState) => state.skills)
+  const projects = useSelector((state: IState) => state.projects).projects
+  const projectsData = useSelector((state: IState) => state.projects)
   const [activeNav, setactiveNav] = React.useState<any>('#home')
+  const dispatch = useDispatch()
+  const [LoadfromProjectsloadoptions, setLoadfromProjectsloadoptions] = React.useState<any>({
+    page: 1,
+    populate: true,
+    limit: 25,
+    sort: { field: null, method: 'DESC' },
+    totalItems: 0,
+  })
+  const performLoadfromProjectsload = (options) => {
+    dispatch(options.searchString ? searchProjects(options) : loadProjects(options))
+  }
+  React.useEffect(() => {
+    performLoadfromProjectsload({
+      ...LoadfromProjectsloadoptions,
+    })
+  }, [LoadfromProjectsloadoptions])
+  const [LoadfromSkillsloadoptions, setLoadfromSkillsloadoptions] = React.useState<any>({
+    page: 1,
+    populate: true,
+    limit: 25,
+    sort: { field: null, method: 'DESC' },
+    totalItems: 0,
+  })
+  const performLoadfromSkillsload = (options) => {
+    dispatch(options.searchString ? searchSkills(options) : loadSkills(options))
+  }
+  React.useEffect(() => {
+    performLoadfromSkillsload({
+      ...LoadfromSkillsloadoptions,
+    })
+  }, [LoadfromSkillsloadoptions])
 
   // Theme selection
 
@@ -183,53 +222,25 @@ const Dashboard: FunctionComponent = (props: any) => {
                 <Typography variant="h3">Frontend Development</Typography>
 
                 <div className={theme.experienceContent}>
-                  <div className={theme.experienceDetails}>
-                    <div className={theme.experienceIcon}>
-                      <CheckCircle />
-                    </div>
+                  {skills
+                    .filter((tmp) => tmp.setType?.set === 'frontend')
+                    .map((skill, index) => {
+                      return (
+                        <React.Fragment key={index}>
+                          <div className={theme.experienceDetails}>
+                            <div className={theme.experienceIcon}>
+                              <CheckCircle />
+                            </div>
 
-                    <div>
-                      <Typography variant="h4">HTML</Typography>
+                            <div>
+                              <Typography variant="h4">{skill.title}</Typography>
 
-                      <span className={theme.small}>Medium</span>
-                    </div>
-                  </div>
-
-                  <div className={theme.experienceDetails}>
-                    <div className={theme.experienceIcon}>
-                      <CheckCircle />
-                    </div>
-
-                    <div>
-                      <Typography variant="h4">CSS</Typography>
-
-                      <span className={theme.small}>Medium</span>
-                    </div>
-                  </div>
-
-                  <div className={theme.experienceDetails}>
-                    <div className={theme.experienceIcon}>
-                      <CheckCircle />
-                    </div>
-
-                    <div>
-                      <Typography variant="h4">JavaScript</Typography>
-
-                      <span className={theme.small}>Medium</span>
-                    </div>
-                  </div>
-
-                  <div className={theme.experienceDetails}>
-                    <div className={theme.experienceIcon}>
-                      <CheckCircle />
-                    </div>
-
-                    <div>
-                      <Typography variant="h4">React</Typography>
-
-                      <span className={theme.small}>Beginner</span>
-                    </div>
-                  </div>
+                              <span className={theme.small}>{skill.level}</span>
+                            </div>
+                          </div>
+                        </React.Fragment>
+                      )
+                    })}
                 </div>
               </div>
 
@@ -237,53 +248,25 @@ const Dashboard: FunctionComponent = (props: any) => {
                 <Typography variant="h3">Backend Development</Typography>
 
                 <div className={theme.experienceContent}>
-                  <div className={theme.experienceDetails}>
-                    <div className={theme.experienceIcon}>
-                      <CheckCircle />
-                    </div>
+                  {skills
+                    .filter((tmp) => tmp.setType?.set === 'backend')
+                    .map((skill, index) => {
+                      return (
+                        <React.Fragment key={index}>
+                          <div className={theme.experienceDetails}>
+                            <div className={theme.experienceIcon}>
+                              <CheckCircle />
+                            </div>
 
-                    <div>
-                      <Typography variant="h4">Node js</Typography>
+                            <div>
+                              <Typography variant="h4">{skill.title}</Typography>
 
-                      <span className={theme.small}>Medium</span>
-                    </div>
-                  </div>
-
-                  <div className={theme.experienceDetails}>
-                    <div className={theme.experienceIcon}>
-                      <CheckCircle />
-                    </div>
-
-                    <div>
-                      <Typography variant="h4">Express js</Typography>
-
-                      <span className={theme.small}>Medium</span>
-                    </div>
-                  </div>
-
-                  <div className={theme.experienceDetails}>
-                    <div className={theme.experienceIcon}>
-                      <CheckCircle />
-                    </div>
-
-                    <div>
-                      <Typography variant="h4">MySQL</Typography>
-
-                      <span className={theme.small}>Medium</span>
-                    </div>
-                  </div>
-
-                  <div className={theme.experienceDetails}>
-                    <div className={theme.experienceIcon}>
-                      <CheckCircle />
-                    </div>
-
-                    <div>
-                      <Typography variant="h4">Sequelize</Typography>
-
-                      <span className={theme.small}>Medium</span>
-                    </div>
-                  </div>
+                              <span className={theme.small}>{skill.level}</span>
+                            </div>
+                          </div>
+                        </React.Fragment>
+                      )
+                    })}
                 </div>
               </div>
             </div>
@@ -295,125 +278,31 @@ const Dashboard: FunctionComponent = (props: any) => {
             <Typography variant="h2">Portfolio</Typography>
 
             <div className={theme.portfolioContainer}>
-              <div className={theme.portfolioItem}>
-                <div className={theme.portfolioImage}>
-                  <picture>
-                    <img src="/img/quoteGenerator.gif" alt="/img/quoteGenerator.gif" />
-                  </picture>
-                </div>
+              {projects.map(({ title, image, githubLink, liveLink }, index) => {
+                return (
+                  <React.Fragment key={index}>
+                    <div className={theme.portfolioItem}>
+                      <div className={theme.portfolioImage}>
+                        <picture>
+                          <img src={`/img/${image}`} alt={`/img/${image}`} />
+                        </picture>
+                      </div>
 
-                <Typography variant="h3">Quotes Generator</Typography>
+                      <Typography variant="h3">{title}</Typography>
 
-                <div className={theme.portfolioCta}>
-                  <a target="_blank" className={theme.btn} href="https://github.com/robrondon/Quote_Generator">
-                    Github
-                  </a>
+                      <div className={theme.portfolioCta}>
+                        <a target="_blank" className={theme.btn} href={githubLink}>
+                          Github
+                        </a>
 
-                  <a target="_blank" className={theme.btnPrimary} href="https://robrondon.github.io/Quote_Generator/">
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-
-              <div className={theme.portfolioItem}>
-                <div className={theme.portfolioImage}>
-                  <picture>
-                    <img src="/img/picInpic.gif" alt="/img/picInpic.gif" />
-                  </picture>
-                </div>
-
-                <Typography variant="h3">Picture in Picture</Typography>
-
-                <div className={theme.portfolioCta}>
-                  <a target="_blank" className={theme.btn} href="https://github.com/robrondon/Picture_in_Picture">
-                    Github
-                  </a>
-
-                  <a target="_blank" className={theme.btnPrimary} href="https://robrondon.github.io/Picture_in_Picture/">
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-
-              <div className={theme.portfolioItem}>
-                <div className={theme.portfolioImage}>
-                  <picture>
-                    <img src="/img/jokeTeller.gif" alt="/img/jokeTeller.gif" />
-                  </picture>
-                </div>
-
-                <Typography variant="h3">Joke Teller</Typography>
-
-                <div className={theme.portfolioCta}>
-                  <a target="_blank" className={theme.btn} href="https://github.com/robrondon/joke_teller">
-                    Github
-                  </a>
-
-                  <a target="_blank" className={theme.btnPrimary} href="https://robrondon.github.io/joke_teller/">
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-
-              <div className={theme.portfolioItem}>
-                <div className={theme.portfolioImage}>
-                  <picture>
-                    <img src="/img/infiniteScroll.gif" alt="/img/infiniteScroll.gif" />
-                  </picture>
-                </div>
-
-                <Typography variant="h3">Infinite Scroll</Typography>
-
-                <div className={theme.portfolioCta}>
-                  <a target="_blank" className={theme.btn} href="https://github.com/robrondon/Infinite_Scroll">
-                    Github
-                  </a>
-
-                  <a target="_blank" className={theme.btnPrimary} href="https://robrondon.github.io/Infinite_Scroll/">
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-
-              <div className={theme.portfolioItem}>
-                <div className={theme.portfolioImage}>
-                  <picture>
-                    <img src="/img/rotatingNav.gif" alt="/img/rotatingNav.gif" />
-                  </picture>
-                </div>
-
-                <Typography variant="h3">Rotating NavBar</Typography>
-
-                <div className={theme.portfolioCta}>
-                  <a target="_blank" className={theme.btn} href="https://github.com/robrondon/rotating_navigation_bar">
-                    Github
-                  </a>
-
-                  <a target="_blank" className={theme.btnPrimary} href="https://robrondon.github.io/rotating_navigation_bar/">
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-
-              <div className={theme.portfolioItem}>
-                <div className={theme.portfolioImage}>
-                  <picture>
-                    <img src="/img/simonGame.gif" alt="/img/simonGame.gif" />
-                  </picture>
-                </div>
-
-                <Typography variant="h3">Simon Game</Typography>
-
-                <div className={theme.portfolioCta}>
-                  <a target="_blank" className={theme.btn} href="https://github.com/robrondon/Simon-Game">
-                    Github
-                  </a>
-
-                  <a target="_blank" className={theme.btnPrimary} href="https://robrondon.github.io/Simon-Game/">
-                    Live Demo
-                  </a>
-                </div>
-              </div>
+                        <a target="_blank" className={theme.btnPrimary} href={liveLink}>
+                          Live Demo
+                        </a>
+                      </div>
+                    </div>
+                  </React.Fragment>
+                )
+              })}
             </div>
           </div>
 

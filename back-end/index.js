@@ -58,6 +58,9 @@ mongoose
   })
 
 require('./app/routes/apiRoutes.js')(app)
+require('./app/routes/projects.routes.js')(app)
+require('./app/routes/skills.routes.js')(app)
+require('./app/routes/skillsets.routes.js')(app)
 
 app.use('/api/images', express.static('./uploads'))
 

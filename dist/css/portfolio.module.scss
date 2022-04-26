@@ -12,17 +12,17 @@
 }
 
 :root {
-  // --color-bg: #1f1f38;
-  --color-bg: #40514e;
-  // --color-bg-variant: #2c2c6c;
-  --color-bg-variant: #11999e;
-  // --color-primary: #4db5ff;
-  --color-primary: #30e3ca;
-  // --color-primary-variant: rgba(77, 181, 255, 0.4);
-  --color-primary-variant: rgba(17, 153, 158, 0.4);
+  --color-bg: #1f1f38;
+  // --color-bg: #40514e;
+  --color-bg-variant: #2c2c6c;
+  // --color-bg-variant: rgba(17, 153, 158, 0.4);
+  --color-primary: #4db5ff;
+  // --color-primary: #30e3ca;
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-primary-variant: #11999e;
   --color-white: #fff;
-  // --color-light: rgba(255, 255, 255, 0.6);
-  --color-light: rgba(255, 255, 255, 0.65);
+  --color-light: rgba(255, 255, 255, 0.6);
+  // --color-light: rgba(255, 255, 255, 0.65);
   --transition: all 400ms ease;
   --container-width-lg: 75%;
   --container-width-md: 86%;
@@ -32,13 +32,13 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
-  // -ms-overflow-style: none;  /* IE and Edge */
-  // scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
-// ::-webkit-scrollbar {
-//   display: none;
-// }
+::-webkit-scrollbar {
+  display: none;
+}
 
 :global(#app) {
   font-family: 'Poppins', sans-serif;
@@ -156,7 +156,6 @@ html {
 
   :global(.css-i4bv87-MuiSvgIcon-root) {
     font-size: 2.5rem;
-    // color: var(--color-primary);
   }
 
   .headerSocials::after {
@@ -192,8 +191,6 @@ html {
   /********** NAVBAR **************/
   .nav {
     background: rgba(0, 0, 0, 0.3);
-    // background: yellow;
-    // width: max-content;
     width: 40%;
     display: block;
     padding: 1.12rem 2.72rem;
@@ -229,7 +226,6 @@ html {
   /********** ABOUT SECTION  **************/
 
   .aboutContainer {
-    // @extend .container;
     display: grid;
     grid-template-columns: 35% 50%;
     gap: 15%;
@@ -268,8 +264,7 @@ html {
   }
 
   .aboutCard {
-    // background: var(--color-bg-variant);
-    background: var(--color-primary-variant);
+    background: var(--color-bg-variant);
     border: 1px solid transparent;
     border-radius: 1.6rem;
     padding: 3.2rem;
@@ -279,8 +274,7 @@ html {
 
   .aboutCard:hover {
     background: transparent;
-    // border-color: var(--color-primary-variant);
-    border-color: var(--color-bg-variant);
+    border-color: var(--color-primary-variant);
     cursor: default;
   }
 
@@ -312,13 +306,11 @@ html {
     margin-top: 1rem;
   }
   .experienceContainer {
-    // @extend .container;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
     > div {
-      // background: var(--color-bg-variant);
-      background: var(--color-primary-variant);
+      background: var(--color-bg-variant);
       padding: 3.84rem 8rem;
       border-radius: 3.2rem;
       border: 1px solid transparent;
@@ -326,8 +318,7 @@ html {
     }
     > div:hover {
       background: transparent;
-      // border-color: var(--color-primary-variant);
-      border-color: var(--color-bg-variant);
+      border-color: var(--color-primary-variant);
       cursor: default;
     }
     > div h3 {
@@ -370,8 +361,7 @@ html {
   }
 
   .portfolioItem {
-    // background: var(--color-bg-variant);
-    background: var(--color-primary-variant);
+    background: var(--color-bg-variant);
     padding: 1.9rem;
     border-radius: 3.2rem;
     border: 1px solid transparent;
@@ -380,8 +370,7 @@ html {
   }
 
   .portfolioItem:hover {
-    // border-color: var(--color-bg-variant);
-    border-color: var(--color-primary-variant);
+    border-color: var(--color-bg-variant);
     background: transparent;
   }
 
@@ -420,8 +409,7 @@ html {
   }
 
   .option {
-    // background: var(--color-bg-variant);
-    background: var(--color-primary-variant);
+    background: var(--color-bg-variant);
     padding: 1.92rem;
     border-radius: 1.92rem;
     text-align: center;
@@ -438,8 +426,7 @@ html {
   }
 
   .option:hover {
-    // border-color: var(--color-bg-variant);
-    border-color: var(--color-primary-variant);
+    border-color: var(--color-bg-variant);
     background: transparent;
     & div {
       color: var(--color-primary);
@@ -457,28 +444,6 @@ html {
     font-size: 1.28rem;
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.92rem;
-    & input,
-    & textarea {
-      width: 100%;
-      padding: 2.4rem;
-      border-radius: 0.8rem;
-      background: transparent;
-      border: 2px solid var(--color-bg-variant);
-      resize: none;
-      color: var(--color-white);
-      font-family: 'Poppins', sans-serif;
-    }
-
-    & input::placeholder,
-    & textarea::placeholder {
-      color: var(--color-primary);
-    }
-  }
-
   /******** MEDIA QUERIES (Medium Devices) *********/
   @media screen and (max-width: 1024px) {
     .container {
@@ -486,7 +451,6 @@ html {
     }
     .section {
       margin-top: 0rem;
-      // padding-top: 10rem;
     }
     .header {
       height: 68vh;
@@ -547,9 +511,6 @@ html {
     .container {
       width: var(--container-width-sm);
     }
-    // .section {
-    //   margin-top: 5rem;
-    // }
     .section > h2 {
       margin-bottom: 3.2rem;
     }

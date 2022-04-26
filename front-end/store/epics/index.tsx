@@ -1,8 +1,11 @@
 import { Action } from 'redux'
 import { combineEpics, createEpicMiddleware } from 'redux-observable'
 import { IState } from '../reducers'
+import projectsEpics from './projectsEpics'
+import skillsEpics from './skillsEpics'
+import skillsetsEpics from './skillsetsEpics'
 
-export const rootEpic = combineEpics()
+export const rootEpic = combineEpics(projectsEpics, skillsEpics, skillsetsEpics)
 
 export function buildFormData(formData, data, parentKey = null) {
   Object.keys(data).forEach((key) => {
